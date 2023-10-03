@@ -25,7 +25,6 @@ header {
 
 .container nav {
     height: 56px;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,19 +78,57 @@ header {
 .header-content1 {
     color: #FF9533;
     font-size: 24px;
+
 }
 
 .calculate {
     text-align: center;
 }
 
-.cal {
+.calculate .header-content2 {
+    position: absolute;
+    width: 1219px;
+    top: 613px;
+    left: 124px;
+    font-family: "Bakbak One-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.cal h1 {
     font-size: 12px;
 }
-.cal-btn {
-   
+
+.cal-btn nav {
+    max-width: 1440px;
+    max-height: 1024px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.cal-btn nav ul {
+    display: flex;
+    list-style: none;
+    width: 256px;
+    justify-content: center;
+}
+
 .cal-btn nav ul li a {
+    color: #FCAB61;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    height: 56px;
+    border: 28px solid #000b6d;
+    border-radius: 6px;
+    justify-content: center;
 }
-    

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bakbak One', cursive;
+}
+
+body {
+    background: url('/css/bg\ workout.svg') no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+/* กำหนดสีพื้นหน้าเว็บ */
+
+form {
+    background-color: rgba(91, 96, 142, 0.8);    border-radius: 10px;
+    padding: 20px;
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 50px #000000;
+}
+/* กำหนดระยะห่างแนวนอน */
+
+label, select, input[type="text"] {
+    margin: 20px;
+}
+
+/* กำหนดขนาดและสีข้อความหัวเรื่อง */
+h1 {
+    font-size: 40px;
+    color: #FF8515;
+}
+
+/* กำหนดสีขอบเขตของ dropdown menu */
+select {
+    border: 1px solid #888888;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* กำหนดสีขอบเขตของปุ่ม */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #FCAB61;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* เมื่อเมาส์ hover ที่ปุ่ม */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* กำหนดระยะห่างของปุ่ม */
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+/* กำหนดขนาดและสีข้อความข้อผิดพลาด */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* กำหนดระยะห่างขอบบนและล่าง */
+form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
