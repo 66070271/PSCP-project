@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TDEE Calculator</title>
-    <link rel="stylesheet" href="/css/calculate.css">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'calculate.css')}}">
 </head>
 <body>
     <h1>TDEE Calculator</h1>
-    <form method="post" action="/calculate">
+    <form method="post" action="/result">
         <label for="weight">น้ำหนัก (kg):</label>
         <input type="text" id="weight" name="weight" placeholder="กรอกน้ำหนักของคุณ" required><br><br>
 

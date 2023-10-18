@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'main.css')}}">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
             <div class="cal-btn">
                 <nav>
                     <ul>
-                        <li><a href="http://127.0.0.1:5500/html/calculate.html">เริ่มคำนวณ</a></li>
+                        <li><a href="http://127.0.0.1:5000/calculate">เริ่มคำนวณ</a></li>
                     </ul>
                 </nav>
             </div>

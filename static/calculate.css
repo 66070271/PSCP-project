@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url('/css/bg\ workout.svg') no-repeat;
+    background: url('bg\ workout.svg') no-repeat;
     background-position: center;
     font-family: Arial, sans-serif;
     text-align: center;
