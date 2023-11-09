@@ -1,0 +1,62 @@
+.container{
+    height : 100vh;
+    width : 100%;
+    background: url(./contactbackground.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.item{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.photo{
+    display: block;
+    box-sizing: border-box;
+    width: 33.33%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.name{
+    text-align: center;
+    color:azure;
+    margin-top: 20px;
+}
+.idnum{
+    text-align: center;
+    color:rgba(83, 83, 221, 0.658);
+    font-size: 30px;
+    margin-top: 30px;
+}
+.contact{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    
+    margin-top: 20px;
+    
+}
+.logo{
+    display: block;
+    box-sizing: border-box;
+    padding-right: 20px;
+    
+    
+}
+.edit{
+    width: 100%;
+    height: 100%;
+}

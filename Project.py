@@ -76,5 +76,8 @@ def result():
 
     return render_template('result.html', bmr=bmr, tdee=tdee, bmi=bmi, nutrition=nutrition)
 
+@app.route("/contact")
+def about():
+    return render_template("contact.html")
 if __name__ == "__main__":
     app.run(debug=True)
