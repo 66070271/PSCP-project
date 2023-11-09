@@ -79,5 +79,74 @@ def result():
 @app.route("/contact")
 def about():
     return render_template("contact.html")
+
+@app.route("/content")
+def content():
+    return render_template("./food/food.html")
+
+@app.route("/radkaeng")
+def radkaeng():
+    return render_template("./food/radkaeng.html")
+
+@app.route("/kubkao")
+def kubkao():
+    return render_template("./food/kubkao.html")
+
+@app.route("/noodle")
+def noodle():
+    return render_template("./food/waternoodle.html")
+
+@app.route("/drynoodle")
+def drynoodle():
+    return render_template("./food/drynoodle.html")
+
+@app.route("/tanya")
+def tanya():
+    return render_template("./food/tanya.html")
+
+@app.route("/root")
+def root():
+    return render_template("./food/root.html")
+
+@app.route("/seed")
+def seed():
+    return render_template("./food/seed.html")
+
+@app.route("/vetgetable")
+def vetgetable():
+    return render_template("./food/vetget.html")
+
+@app.route("/fruit")
+def fruit():
+    return render_template("./food/fruit.html")
+
+@app.route("/meat")
+def meat():
+    return render_template("./food/meat.html")
+
+@app.route("/egg")
+def egg():
+    return render_template("./food/egg.html")
+
+@app.route("/milk")
+def milk():
+    return render_template("./food/milk.html")
+
+@app.route("/prung")
+def prung():
+    return render_template("./food/prung.html")
+
+@app.route("/snack")
+def snack():
+    return render_template("./food/snack.html")
+
+@app.route("/jandeaw")
+def jandeaw():
+    return render_template("./food/jandeaw.html")
+
+@app.route("/water")
+def water():
+    return render_template("./food/water.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
