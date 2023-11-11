@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+body {
+    font-family: 'Bakbak One', sans-serif; /* ใช้ฟอนต์ Bakbak One สำหรับ body */
+    background: url('bg\ workout.svg');
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+.box {
+    background-color: rgba(91, 96, 142, 0.8);    border-radius: 10px;
+    padding: 20px;
+    width: 1000px;
+    margin: 50px auto 0;
+    box-shadow: 0px 0px 50px #000000;
+}
+h1 {
+    text-align: center;
+    color: #FF8515;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
