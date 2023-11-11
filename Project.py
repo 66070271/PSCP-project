@@ -1,4 +1,5 @@
 from flask import Flask , render_template , request
+import pandas as pd
 app = Flask(__name__)
 # ฟังก์ชันคำนวณ BMR โดยใช้สูตร Harris-Benedict
 def calculate_bmr(weight, height, age, gender):
@@ -82,71 +83,119 @@ def about():
 
 @app.route("/content")
 def content():
-    return render_template("./food/food.html")
-
-@app.route("/radkaeng")
-def radkaeng():
-    return render_template("./food/radkaeng.html")
+    return render_template("food.html")
 
 @app.route("/kubkao")
 def kubkao():
-    return render_template("./food/kubkao.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[42: 52]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/noodle")
 def noodle():
-    return render_template("./food/waternoodle.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[52: 68]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/drynoodle")
 def drynoodle():
-    return render_template("./food/drynoodle.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[68: 73]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/tanya")
 def tanya():
-    return render_template("./food/tanya.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[73: 96]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/root")
 def root():
-    return render_template("./food/root.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[96: 112]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/seed")
 def seed():
-    return render_template("./food/seed.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[112: 179]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/vetgetable")
 def vetgetable():
-    return render_template("./food/vetget.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[179: 426]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/fruit")
 def fruit():
-    return render_template("./food/fruit.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[426: 502]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/meat")
 def meat():
-    return render_template("./food/meat.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[502: 542]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/egg")
 def egg():
-    return render_template("./food/egg.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[606: 616]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/milk")
 def milk():
-    return render_template("./food/milk.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[616: 650]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/prung")
 def prung():
-    return render_template("./food/prung.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[650: 676]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/snack")
 def snack():
-    return render_template("./food/snack.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[676: 701]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/jandeaw")
 def jandeaw():
-    return render_template("./food/jandeaw.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[701: 842]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 @app.route("/water")
 def water():
-    return render_template("./food/water.html")
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.iloc[542: 606]
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
+
+@app.route("/radkaeng")
+def foodresult():
+    df = pd.read_excel('dataframe.xlsx')
+    selected_food = df.head(42)
+    food_data = selected_food.to_dict(orient='records')
+    return render_template('resultfood.html', food_data = food_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
