@@ -1,7 +1,9 @@
 from flask import Flask , render_template , request
 import pandas as pd
 app = Flask(__name__)
+#===================================================================================== ฟังก์ชันการคำนวณ ======================================================================================
 # ฟังก์ชันคำนวณ BMR โดยใช้สูตร Harris-Benedict
+
 def calculate_bmr(weight, height, age, gender):
     if gender == 'male':
         bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
@@ -10,6 +12,7 @@ def calculate_bmr(weight, height, age, gender):
     return round(bmr,2)
 
 # ฟังก์ชันคำนวณ TDEE โดยใช้ BMR และระดับกิจกรรม
+
 def calculate_tdee(bmr, activity_level):
     activity_levels = {
         'sedentary': 1.2,
@@ -21,12 +24,14 @@ def calculate_tdee(bmr, activity_level):
     return round(bmr * activity_levels[activity_level],2)
 
 # ฟังก์ชันคำนวณ BMI
+
 def calculate_bmi(weight, height):
     height_meters = height / 100
     bmi = weight / (height_meters ** 2)
     return round(bmi,2)
 
 # ฟังก์ชันคำนวณปริมาณสารอาหาร (โปรตีน, ไขมัน, และคาร์โบไฮเดรต)
+
 def calculate_nutrition(goal, tdee):
     if goal == 'fat_loss':
         protein_ratio = 0.25
@@ -52,15 +57,16 @@ def calculate_nutrition(goal, tdee):
         'fat_per_day': fat_per_day,
         'carbohydrate_per_day': carbohydrate_per_day
     }
-
+# ======================================================================ฟังก์ชันแสดงผล======================================================================
+# หน้าหลัก
 @app.route("/")
 def home():
     return render_template("realtdee.html")
-
+# หน้าformที่userต้องกรอกข้อมูล
 @app.route("/calculate")
 def calculate():
     return render_template("calculate.html")
-
+# หน้าแสดงผลที่คำนวณแล้ว
 @app.route("/result",methods = ['POST'])
 def result():
     weight = float(request.form['weight'])
@@ -76,15 +82,15 @@ def result():
     nutrition = calculate_nutrition(goal, tdee)
 
     return render_template('result.html', bmr=bmr, tdee=tdee, bmi=bmi, nutrition=nutrition)
-
+# หน้าcontactของสมาชิก
 @app.route("/contact")
 def about():
     return render_template("contact.html")
-
+# หน้าหมวดหมู่อาหาร
 @app.route("/content")
 def content():
     return render_template("food.html")
-
+#------------------------------------------------------------------------------- ฟังก์ชันดึงค่าข้อมูลจาก excelและแสดงผลหน้าเว็บ -------------------------------------------------------------------------------
 @app.route("/kubkao")
 def kubkao():
     df = pd.read_excel('dataframe.xlsx')
